@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int numAlunos = 15;
+    double notas[15];
+    double soma = 0.0;
+    double media;
+    int i;
+
+    // Solicitando ao usuário que insira as notas dos alunos
+    printf("Digite as notas das provas dos %d alunos:\n", numAlunos);
+
+    // Lendo as notas e armazenando no vetor
+    for (i = 0; i < numAlunos; i++) {
+        scanf("%lf", &notas[i]);
+        soma += notas[i];
+    }
+
+    // Calculando a média geral
+    media = soma / numAlunos;
+
+    // Mostrando a média geral na tela
+    printf("A media geral das notas e: %.2lf\n", media);
+
+    return 0;
+}
