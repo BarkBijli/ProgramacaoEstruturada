@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int A[6]; // Declarando um vetor de 6 números inteiros
+    int soma; // Variável para armazenar a soma
+    int i;    // Declaração da variável i aqui
+
+    // Atribuindo os valores ao vetor A
+    A[0] = 1;
+    A[1] = 0;
+    A[2] = 5;
+    A[3] = -2;
+    A[4] = -5;
+    A[5] = 7;
+
+    // Calculando a soma das posicoes A[0], A[1] e A[5] do vetor A
+    soma = A[0] + A[1] + A[5];
+
+    // Mostrando a soma na tela
+    printf("A soma de A[0], A[1] e A[5] e: %d\n", soma);
+
+    // Modificando o vetor na posição 4 (A[4]) para 100
+    A[4] = 100;
+
+    // Mostrando cada valor do vetor A em uma linha
+    printf("Valores do vetor A:\n");
+    for (i = 0; i < 6; i++) {
+        printf("%d\n", A[i]);
+    }
+
+    return 0;
+}
