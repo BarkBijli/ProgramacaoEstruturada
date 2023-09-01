@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int valores[5];
+    int maior, menor, soma = 0;
+    float media;
+    int i; // Declare a variável de controle do loop aqui
+
+    // Solicitando ao usuário que insira os valores
+    printf("Digite 5 valores inteiros:\n");
+
+    // Lendo os valores e armazenando no vetor
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &valores[i]);
+
+        // Inicializando maior e menor com o primeiro valor inserido
+        if (i == 0) {
+            maior = menor = valores[i];
+        } else {
+            // Atualizando o maior e o menor, se necessário
+            if (valores[i] > maior) {
+                maior = valores[i];
+            }
+            if (valores[i] < menor) {
+                menor = valores[i];
+            }
+        }
+        soma += valores[i];
+    }
+
+    // Calculando a média
+    media = (float)soma / 5;
+
+    // Mostrando os resultados na tela
+    printf("Valores lidos: ");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", valores[i]);
+    }
+    printf("\nMaior valor: %d\n", maior);
+    printf("Menor valor: %d\n", menor);
+    printf("Media dos valores: %.2f\n", media);
+
+    return 0;
+}
