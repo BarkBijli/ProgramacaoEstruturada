@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[10];
+    int i, countPares = 0;
+
+    // Solicitando ao usuário que insira os valores do vetor
+    printf("Digite 10 valores inteiros:\n");
+
+    // Lendo os valores e armazenando no vetor
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Contando os valores pares no vetor
+    for (i = 0; i < 10; i++) {
+        if (vetor[i] % 2 == 0) {
+            countPares++;
+        }
+    }
+
+    // Mostrando a quantidade de valores pares
+    printf("O vetor possui %d valores pares.\n", countPares);
+
+    return 0;
+}
