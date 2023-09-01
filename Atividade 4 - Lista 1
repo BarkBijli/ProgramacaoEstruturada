@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[8];
+    int X, Y;
+    int i;
+
+    // Solicitando ao usuário que insira os valores do vetor
+    printf("Digite 8 valores inteiros para o vetor:\n");
+
+    // Lendo os valores e armazenando no vetor
+    for (i = 0; i < 8; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Solicitando ao usuário que insira os valores de X e Y
+    printf("Digite dois valores inteiros para X e Y (posições no vetor):\n");
+    scanf("%d %d", &X, &Y);
+
+    // Verificando se X e Y estão dentro dos limites válidos (0 a 7)
+    if (X >= 0 && X < 8 && Y >= 0 && Y < 8) {
+        // Calculando a soma dos valores nas posições X e Y
+        int soma = vetor[X] + vetor[Y];
+
+        // Mostrando a soma na tela
+        printf("A soma dos valores nas posições %d e %d e: %d\n", X, Y, soma);
+    } else {
+        printf("As posições X e Y estão fora dos limites válidos.\n");
+    }
+
+    return 0;
+}
