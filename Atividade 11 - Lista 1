@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    double vetor[10];
+    int quantNegativos = 0;
+    double somaPositivos = 0.0;
+    int i; // Declare a variável de controle do loop aqui
+
+    // Solicitando ao usuário que insira os valores
+    printf("Digite 10 numeros reais:\n");
+
+    // Lendo os valores e armazenando no vetor
+    for (i = 0; i < 10; i++) {
+        scanf("%lf", &vetor[i]);
+    }
+
+    // Calculando a quantidade de números negativos e a soma dos números positivos
+    for (i = 0; i < 10; i++) {
+        if (vetor[i] < 0) {
+            quantNegativos++;
+        } else {
+            somaPositivos += vetor[i];
+        }
+    }
+
+    // Mostrando os resultados na tela
+    printf("Quantidade de numeros negativos: %d\n", quantNegativos);
+    printf("Soma dos numeros positivos: %.2lf\n", somaPositivos);
+
+    return 0;
+}
