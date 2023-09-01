@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    double vetorOriginal[10];
+    double vetorQuadrado[10];
+    int i;
+
+    // Solicitando ao usuário que insira os valores
+    printf("Digite 10 numeros reais:\n");
+
+    // Lendo os valores e armazenando no vetorOriginal
+    for (i = 0; i < 10; i++) {
+        scanf("%lf", &vetorOriginal[i]);
+    }
+
+    // Calculando o quadrado e armazenando no vetorQuadrado
+    for (i = 0; i < 10; i++) {
+        vetorQuadrado[i] = vetorOriginal[i] * vetorOriginal[i];
+    }
+
+    // Mostrando o vetorOriginal na tela
+    printf("Vetor Original:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%.2lf\n", vetorOriginal[i]);
+    }
+
+    // Mostrando o vetorQuadrado na tela
+    printf("Vetor Quadrado:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%.2lf\n", vetorQuadrado[i]);
+    }
+
+    return 0;
+}
